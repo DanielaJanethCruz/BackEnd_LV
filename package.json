@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -w"
+    "build": "tsc -w",
+    "start": "node dist/app.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\""
   },
+
 
   "keywords": [],
   "author": "",
