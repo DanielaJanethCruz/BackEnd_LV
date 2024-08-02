@@ -5,8 +5,6 @@ import bodyParser from 'body-parser';
 import authRoutes from './routes/authRoutes';
 import usuarioRoutes from './routes/usuarioRoutes';
 
-
-
 class Server {
   private app:Application;
 
