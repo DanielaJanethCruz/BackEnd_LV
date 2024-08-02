@@ -21,7 +21,11 @@ class Server {
   config():void{
     this.app.set("port", 3000);
     this.app.use(morgan("dev"));
-    this.app.use(cors());
+    this.app.use(cors({
+      origin: '*', // Permite todos los orígenes
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+      allowedHeaders: 'Content-Type, Authorization'
+    }));
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({extended: false}));
   }
